@@ -46,11 +46,12 @@ body{
     float: left;
     width: 25%;
     border-left: 1px solid #2c71b8;
+    position: relative;
 }
 .menu > li:last-child{
     border-right: 1px solid #2c71b8;
 }
-.menu > li >a{
+.menu > li > a{
     display: block;
     text-decoration: none;
     height: 50px;
@@ -60,9 +61,58 @@ body{
     text-align: center;
     line-height: 50px;
 }
-.menu > li >a:hover{
+.menu > li > a:hover{
     color: white;
     background-color: #2b71b7;
+}
+.arrow:hover{
+    background: url(images/arrowWhite.png) no-repeat;
+}
+.submenu > li > a:hover{
+    color:  #2c71b8;
+    background-color: white;
+}
+li.products:hover>a{
+    background: #2c71b8;
+    color: white;
+}
+.submenu > li > a{
+    display: block;
+    text-decoration: none;
+    color:white;
+    background-color: #2b71b7;
+    height: 40px;
+    line-height: 40px;
+    font-size: 21px;
+    font-weight: 300;
+    padding-left: 28px;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+}
+.products:hover .arrow{
+    background: url(images/arrowWhite.png) no-repeat;
+}
+.submenu{
+    visibility: hidden;
+    position: absolute;
+    width: 286px;
+    height: 340px;
+    margin-left: -1px;
+    padding-top: 20px;
+    background-color: #2b71b7;
+}
+.products{
+    position: relative;
+}
+.arrow{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(images/arrowBlue.png) no-repeat;
+    position: absolute;
+    top: 13px;
+    right: 7px;
 }
 .search{
     border: 1px solid #2c71b8;
