@@ -273,18 +273,17 @@ li.products:hover>a{
     padding-bottom: 20px;
     padding-top: 10px;
     text-align: center;
-    position: relative;
 }
 .dollars{
     font-size: 48px;
     font-weight: bold;
+    display: inline-block;
 }
 .cents{
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
-    position: absolute;
-    right: 40px;
-    top: 10px;
+    display: inline-block;
+    vertical-align: top;
 }
 .moreDetailes{
     width: 210px;
@@ -303,9 +302,13 @@ li.products:hover>a{
     font-size: 21px;
     font-weight: bold;
     margin-left: 30px;
-    margin-top: 15px;
-    background-color: rgba(255, 255, 255, 0.2);   
+    margin-top: 15px;       
     border: 1px solid rgba(255, 255, 255, 0.2);
+    background: url(images/cartWhite.png) no-repeat rgba(255, 255, 255, 0.2);
+    background-position-x: 176px;
+    background-position-y: 13px;
+    text-align: left;
+    padding-left: 20px;
 }
 .moreDetailes:hover{
     background-color: rgba(255, 255, 255, 0.2);
@@ -321,9 +324,68 @@ li.products:hover>a{
 .addToCart:focus{
     outline: none;
 }
+
+
+
 .filter{
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
-    height: 840px;
-    /* width: 270px; */
+    height: 840px; 
+    font-size: 21px;     
+    border-right: 1px solid white;
+    position: relative;   
+    padding: 20px;
+}
+.filterDevice{
+    padding: 0px;
+}
+.upperText{
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+}
+.filter label{ 
+  display: block;
+  padding-top: 11px;
+  padding-left: 30px;
+  padding-bottom: 11px;
+}
+.showMore{
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    display: block;
+}
+.inputButton{
+    color: white;
+    background-color: #2c71b8;
+    width: 210px;
+    height: 50px;
+    border: 1px solid white;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 15px;
+}
+.inputButton:hover{
+    color: #2c71b8;
+    background-color: white;
+}
+.inputButton:focus{
+    outline: none;
+}
+label:before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;    
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + label:before{
+    background-color: white;
 }
